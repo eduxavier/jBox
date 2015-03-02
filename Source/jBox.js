@@ -1062,13 +1062,16 @@ jBox.prototype.attach = function(elements, trigger) {
 				// Prevent default action on click
 				trigger == 'click' && this.options.preventDefault && ev.preventDefault();
 				
-				// Toggle or open jBox
-				// this[trigger == 'click' && !forceOpen ? 'toggle' : 'open']();
-				/* I removed this line because if I want open multiples modal windows it does'tn work nice.
+				/* 
+				   Toggle or open jBox
+				   this[trigger == 'click' && !forceOpen ? 'toggle' : 'open']();
+				   
+				   I removed this line because if I want open multiples modal windows it does'tn work nice.
 				   Once I open a window, then open another windows and then back to the windows I opened before when I close this last one, 
 				   it seem to open two windows and the another one in the back doesn't have any content. 
 				   Doesn't need to toogle anymore.
 				   If I use this['open'](); for example. It opens two windows. One with the content and another behind with no content.
+				   
 				*/
 			}.bind(this));
 			
